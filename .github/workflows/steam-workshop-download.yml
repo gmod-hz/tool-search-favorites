@@ -1,0 +1,12 @@
+name: Steam Workshop Download
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  steam-workshop-download:
+    uses: gmod-hz/.github/.github/workflows/steam-workshop-download.yml@main
+    with:
+      workshop-id: ${{ vars.WORKSHOP_ITEM_ID }}
