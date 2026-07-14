@@ -7,6 +7,8 @@ on:
 
 jobs:
   steam-workshop-download:
+    permissions:
+      contents: write
     uses: gmod-hz/.github/.github/workflows/steam-workshop-download.yml@main
     with:
       workshop-id: ${{ vars.WORKSHOP_ITEM_ID }}
